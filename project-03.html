@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Визуализация аркадных <br>автоматов</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header site-header--static">
+    <div class="container site-header__inner">
+      <nav class="nav">
+        <a href="index.html#hero">Главная</a>
+        <a href="index.html#projects">Проекты</a>
+        <a href="index.html#about">Обо мне</a>
+        <a href="index.html#contacts">Связь</a>
+      </nav>
+      <a class="btn btn--outline" href="index.html#contacts">Связаться</a>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <section class="project-detail section project-detail--first">
+      <div class="container">
+        <a class="project-back" href="index.html#projects">← Назад</a>
+
+        <h1 class="project-detail__title">Визуализация аркадных <br>автоматов</h1>
+
+        <div class="project-detail__hero">
+          <video
+            class="project-detail__main-video"
+            src="video/video-main-03.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+          ></video>
+        </div>
+
+        <div class="project-detail__info">
+          <div class="project-detail__text">
+            <p>
+              Проект был разработан для информационного сайта, где основной задачей стало создание максимально реалистичных рендеров реально существовавших моделей аркадных автоматов. 
+              Особое внимание уделялось точности материалов и общему визуальному соответствию оригиналам.
+            </p>
+
+            <p>
+                В процессе работы было собрано большое количество референсов, включая архивные фотографии и видеоматериалы, что позволило детально воссоздать внешний вид автоматов. 
+                Некоторые декали приходилось перерисовывались вручную. Для финальной визуализации также использовались реальные футажи игр, благодаря чему удалось добиться ещё большей достоверности.
+          </div>
+
+          <aside class="project-detail__meta">
+            <div class="project-meta-item">
+              <span class="project-meta-item__label">Дата</span>
+              <span class="project-meta-item__value">Май 2025</span>
+            </div>
+
+            <div class="project-meta-item">
+              <span class="project-meta-item__label">Программы</span>
+              <span class="project-meta-item__value">Blender</span>
+            </div>
+
+            <div class="project-meta-item">
+              <span class="project-meta-item__label">Время реализации</span>
+              <span class="project-meta-item__value">2 месяца</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-slider section">
+      <div class="container">
+        <h2 class="project-slider__title">Этапы работы</h2>
+
+        <div
+          class="slider"
+          data-slider
+          data-videos="video/video-03-01.mp4, video/video-03-02.mp4, video/video-main-03.mp4"
+        >
+          <div class="slider__viewport">
+            <video
+              class="slider__video"
+              data-slider-video
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+
+            <button
+              class="slider__arrow slider__arrow--prev"
+              type="button"
+              data-slider-prev
+              aria-label="Предыдущий ролик"
+            >
+              &#10094;
+            </button>
+
+            <button
+              class="slider__arrow slider__arrow--next"
+              type="button"
+              data-slider-next
+              aria-label="Следующий ролик"
+            >
+              &#10095;
+            </button>
+          </div>
+
+          <div class="slider__dots" data-slider-dots></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Портфолио. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио 3D-аниматора</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <nav class="nav">
+      <a href="#hero">Главная</a>
+      <a href="#projects">Проекты</a>
+      <a href="#about">Обо мне</a>
+      <a href="#contacts">Связь</a>
+    </nav>
+    <a class="btn btn--outline" href="#contacts">Связаться</a>
+  </div>
+</header>
+
+ <main>
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__text">
+          <h1>Делаю анимационные<br>ролики на заказ</h1>
+          <p class="hero__subtitle">
+            Сделаю быстро, качественно<br>
+            и с вниманием к деталям
+          </p>
+        </div>
+
+        <div class="hero__actions">
+          <a class="btn" href="#projects">Портфолио</a>
+          <a class="btn btn--outline" href="#contacts">Связаться</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container about__wrapper">
+      <div class="about__content">
+        <h2>Обо мне</h2>
+        <p>
+          Я занимаюсь созданием анимационных роликов на заказ, обеспечивая полный
+          цикл производства: от разработки концепции и 3D-моделирования до анимации
+          и финального рендера, выполняя работу с качеством, ответственностью и
+          вниманием к деталям на каждом этапе проекта.
+        </p>
+
+        <div class="skills">
+          <span>Autodesk Maya</span>
+          <span>Motion Builder</span>
+          <span>Substance Painter</span>
+          <span>Houdini</span>
+          <span>Blender</span>
+          <span>Unreal Engine</span>
+          <span>Adobe Photoshop</span>
+        </div>
+      </div>
+
+      <div class="about__image">
+        <img src="img/portrait.png" alt="Портрет">
+      </div>
+    </div>
+  </section>
+
+  <section class="projects section" id="projects">
+    <div class="container">
+      <h2 class="section-title">Выполненные проекты</h2>
+
+      <div class="projects-list">
+        <article class="project">
+          <div class="project__image">
+            <img src="img/project-01.png" alt="Проект КЛИК">
+          </div>
+          <div class="project__info">
+            <h3>КЛИК</h3>
+            <p>Интро-ролик для чемпионата по сборке LEGO «Клик»</p>
+            <a class="btn" href="project-01.html">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="project project--reverse">
+          <div class="project__image">
+            <img src="img/project-02.png" alt="Проект Care my baby">
+          </div>
+          <div class="project__info">
+            <h3>Care my baby</h3>
+            <p>Анимационный ролик с маскотом для онлайн-школы Care my Baby</p>
+            <a class="btn" href="project-02.html">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__image">
+            <img src="img/project-03.png" alt="Аркадные автоматы">
+          </div>
+          <div class="project__info">
+            <h3>Аркадные автоматы</h3>
+            <p>Разработка 3D-моделей аркадных автоматов для информационного проекта</p>
+            <a class="btn" href="project-03.html">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="project project--reverse">
+          <div class="project__image">
+            <img src="img/project-04.png" alt="Развлекательный ролик">
+          </div>
+          <div class="project__info">
+            <h3>Развлекательный ролик</h3>
+            <p>Сделано быстро, качественно и с вниманием к деталям</p>
+            <a class="btn" href="project-04.html">Подробнее</a>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project__image">
+            <img src="img/project-05.png" alt="Анимационный ролик">
+          </div>
+          <div class="project__info">
+            <h3>Анимация атаки</h3>
+            <p>Тренировочная работа, демонстрирующая ключевые навыки в 3D-анимации</p>
+            <a class="btn" href="project-05.html">Подробнее</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts section" id="contacts">
+    <div class="container contacts__wrapper">
+        <form id="contact-form" class="contact-form">
+        <p class="contact-form__title">Давайте обсудим детали проекта</p>
+
+        <input type="text" id="name" placeholder="Имя">
+        <input type="email" id="email" placeholder="Email для связи">
+        <textarea id="message" placeholder="Комментарий"></textarea>
+
+        <button id="submit-btn" class="btn" type="submit">
+            Отправить
+        </button>
+
+        <div id="form-status" class="form-status"></div>
+        </form>
+
+      <div class="contacts__content">
+        <h2>Напишите мне</h2>
+        <p>
+          Свяжитесь со мной, чтобы обсудить ваш проект, задать вопросы или получить
+          консультацию. Я открыт к сотрудничеству и готов помочь реализовать вашу идею.
+        </p>
+
+        <div class="contacts__info">
+          <a href="tel:+79025087689">+7 (902) 508 76-89</a>
+          <a href="mailto:stepan-ryabichenko@yandex.ru">stepan-ryabichenko@yandex.ru</a>
+
+          <div class="socials">
+            <a href="#" aria-label="VK">
+              <img src="img/icon-01.png" alt="VK">
+            </a>
+            <a href="#" aria-label="Telegram">
+              <img src="img/icon-02.png" alt="Telegram">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Портфолио. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="java/script4.js"></script>
+</body>
+</html>

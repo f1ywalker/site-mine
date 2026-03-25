@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Маскот для «Care my baby»</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header site-header--static">
+    <div class="container site-header__inner">
+      <nav class="nav">
+        <a href="index.html#hero">Главная</a>
+        <a href="index.html#projects">Проекты</a>
+        <a href="index.html#about">Обо мне</a>
+        <a href="index.html#contacts">Связь</a>
+      </nav>
+      <a class="btn btn--outline" href="index.html#contacts">Связаться</a>
+    </div>
+  </header>
+
+  <main class="project-page">
+    <section class="project-detail section project-detail--first">
+      <div class="container">
+        <a class="project-back" href="index.html#projects">← Назад</a>
+
+        <h1 class="project-detail__title">Маскот для «Care my baby»</h1>
+
+        <div class="project-detail__hero">
+          <video
+            class="project-detail__main-video"
+            src="video/video-main-02.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+          ></video>
+        </div>
+
+        <div class="project-detail__info">
+          <div class="project-detail__text">
+            <p>
+              Проект для «Care my baby» был 
+              направлен на разработку маскота для платформы дошкольного образования. Основной задачей было создать доброго и милого персонажа, 
+              который вызывал бы доверие и симпатию и за счет этого привлекал внимание молодой аудитории.
+            </p>
+
+            <p>
+                После создания концепта, персонаж был смоделирован и текстурирован в Blender, после чего был
+                зариган и анимирован в Autodesk Maya.
+                Финальный рендер также выполнялся в Blender, что позволило добиться высокого качества изображения.
+          </div>
+
+          <aside class="project-detail__meta">
+            <div class="project-meta-item">
+              <span class="project-meta-item__label">Дата</span>
+              <span class="project-meta-item__value">Октябрь 2025</span>
+            </div>
+
+            <div class="project-meta-item">
+              <span class="project-meta-item__label">Программы</span>
+              <span class="project-meta-item__value">Blender, Maya</span>
+            </div>
+
+            <div class="project-meta-item">
+              <span class="project-meta-item__label">Время реализации</span>
+              <span class="project-meta-item__value">2 недели</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-slider section">
+      <div class="container">
+        <h2 class="project-slider__title">Этапы работы</h2>
+
+        <div
+          class="slider"
+          data-slider
+          data-videos="video/video-02-01.mp4, video/video-02-02.mp4, video/video-main-02.mp4"
+        >
+          <div class="slider__viewport">
+            <video
+              class="slider__video"
+              data-slider-video
+              autoplay
+              muted
+              loop
+              playsinline
+              controls
+            ></video>
+
+            <button
+              class="slider__arrow slider__arrow--prev"
+              type="button"
+              data-slider-prev
+              aria-label="Предыдущий ролик"
+            >
+              &#10094;
+            </button>
+
+            <button
+              class="slider__arrow slider__arrow--next"
+              type="button"
+              data-slider-next
+              aria-label="Следующий ролик"
+            >
+              &#10095;
+            </button>
+          </div>
+
+          <div class="slider__dots" data-slider-dots></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Портфолио. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
