@@ -145,17 +145,17 @@
   <section class="contacts section" id="contacts">
     <div class="container contacts__wrapper">
         <form id="contact-form" class="contact-form">
-        <p class="contact-form__title">Давайте обсудим детали проекта</p>
+          <p class="contact-form__title">Давайте обсудим детали проекта</p>
 
-        <input type="text" id="name" placeholder="Имя">
-        <input type="email" id="email" placeholder="Email для связи">
-        <textarea id="message" placeholder="Комментарий"></textarea>
+          <input type="text" id="name" name="name" placeholder="Имя" required>
+          <input type="email" id="email" name="email" placeholder="Email для связи" required>
+          <textarea id="message" name="message" placeholder="Комментарий" required></textarea>
 
-        <button id="submit-btn" class="btn" type="submit">
+          <button id="submit-btn" class="btn" type="submit">
             Отправить
-        </button>
+          </button>
 
-        <div id="form-status" class="form-status"></div>
+          <div id="form-status" class="form-status"></div>
         </form>
 
       <div class="contacts__content">

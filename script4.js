@@ -1,75 +1,53 @@
-// java/script4.js
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contact-form');
-    const statusBox = document.getElementById('form-status');
-    const submitBtn = document.getElementById('submit-btn');
+const form = document.getElementById("contact-form");
+const statusEl = document.getElementById("form-status");
+const submitBtn = document.getElementById("submit-btn");
 
-    const TELEGRAM_BOT_TOKEN = '8625909587:AAH61bPhuYY3Oh8DAs3fzJ8lDBIk9QAF7g8';
-    const TELEGRAM_CHAT_ID = '505640835';
+const TELEGRAM_BOT_TOKEN = "8625909587:AAH61bPhuYY3Oh8DAs3fzJ8lDBIk9QAF7g8";
+const TELEGRAM_CHAT_ID = "505640835";
 
-    if (!form) return;
+if (form) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    const name = document.getElementById("name")?.value.trim();
+    const email = document.getElementById("email")?.value.trim();
+    const message = document.getElementById("message")?.value.trim();
 
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
+    if (!name || !email || !message) {
+      statusEl.textContent = "Пожалуйста, заполните все поля.";
+      return;
+    }
 
-        statusBox.textContent = '';
-        statusBox.className = 'form-status';
+    submitBtn.disabled = true;
+    statusEl.textContent = "Отправка...";
 
-        if (!name || !email || !message) {
-            statusBox.textContent = 'Заполни все поля.';
-            statusBox.classList.add('error');
-            return;
-        }
+    const text =
+      `Новая заявка с сайта:%0A%0A` +
+      `Имя: ${encodeURIComponent(name)}%0A` +
+      `Email: ${encodeURIComponent(email)}%0A` +
+      `Комментарий: ${encodeURIComponent(message)}`;
 
-        const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        if (!emailValid) {
-            statusBox.textContent = 'Неверный формат почты.';
-            statusBox.classList.add('error');
-            return;
-        }
+    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage?chat_id=${TELEGRAM_CHAT_ID}&text=${text}`;
 
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Отправка...';
+    try {
+      const response = await fetch(url, {
+        method: "GET"
+      });
 
-        const text =
-            `📩 Новая заявка с сайта\n\n` +
-            `Имя: ${name}\n` +
-            `Email: ${email}\n` +
-            `Сообщение:\n${message}`;
+      const result = await response.json();
 
-        try {
-            const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    chat_id: TELEGRAM_CHAT_ID,
-                    text: text
-                })
-            });
-
-            const result = await response.json();
-
-            if (result.ok) {
-                statusBox.textContent = 'Сообщение отправлено в Telegram.';
-                statusBox.classList.add('success');
-                form.reset();
-            } else {
-                statusBox.textContent = result.description || 'Ошибка Telegram API.';
-                statusBox.classList.add('error');
-            }
-        } catch (error) {
-            console.error(error);
-            statusBox.textContent = 'Ошибка отправки. Браузер мог заблокировать запрос.';
-            statusBox.classList.add('error');
-        } finally {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Отправить';
-        }
-    });
-});
+      if (result.ok) {
+        statusEl.textContent = "Сообщение успешно отправлено.";
+        form.reset();
+      } else {
+        statusEl.textContent = "Ошибка отправки.";
+        console.error(result);
+      }
+    } catch (error) {
+      statusEl.textContent = "Не удалось отправить сообщение.";
+      console.error(error);
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
