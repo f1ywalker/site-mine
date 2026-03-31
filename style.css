@@ -1107,3 +1107,16 @@ textarea {
     font-size: 0.85rem;
   }
 }
+/* BUTTON STATES */
+
+.btn--loading {
+  background: #555 !important;
+  border-color: #555 !important;
+  cursor: default;
+}
+
+.btn--success {
+  background: linear-gradient(to right, #4caf50, #43a047) !important;
+  border-color: transparent !important;
+  cursor: default;
+}
