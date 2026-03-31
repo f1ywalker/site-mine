@@ -11,12 +11,12 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body id="top">
   <header class="site-header site-header--static">
     <div class="container site-header__inner">
       <nav class="nav">
         <a href="index.html#hero">Главная</a>
-        <a href="index.html#projects">Проекты</a>
+        <a href="cases.html">Проекты</a>
         <a href="index.html#about">Обо мне</a>
         <a href="index.html#contacts">Связь</a>
       </nav>
@@ -27,7 +27,19 @@
   <main class="project-page">
     <section class="project-detail section project-detail--first">
       <div class="container">
-        <a class="project-back" href="index.html#projects">← Назад</a>
+
+        <div class="project-detail__nav">
+          <a class="project-back" href="cases.html">← Назад к проектам</a>
+
+          <div class="project-switch">
+            <a class="project-switch__arrow" href="project-03.html" aria-label="Предыдущий проект">
+              &#10094;
+            </a>
+            <a class="project-switch__arrow" href="project-05.html" aria-label="Следующий проект">
+              &#10095;
+            </a>
+          </div>
+        </div>
 
         <h1 class="project-detail__title">Развлекательный проект</h1>
 
@@ -46,14 +58,22 @@
         <div class="project-detail__info">
           <div class="project-detail__text">
             <p>
-              Данный проект носил развлекательный характер, и его основной задачей было создание небольшого фрагмента полноценного анимационного ролика. 
-              Важным аспектом стало тестирование пайплайна работы и достижение качественного визуального результата.
+              Данный проект носил развлекательный характер, и его основной задачей
+              было создание небольшого фрагмента полноценного анимационного ролика.
+              Важным аспектом стало тестирование пайплайна работы и достижение
+              качественного визуального результата.
             </p>
 
             <p>
-                Производство ролика было организовано по полному студийному пайплайную. Сначала была разработана раскадровка, затем выполнен общий лейаут сцены.
-                После этого были смоделированы локация и персонажи, выполнена анимация, и на финальном этапе сцена была собрана и подготовлена к рендеру. В процессе работы было создано множество анимационных циклов. Для каждого персонажа были 
-                разработаны базовые циклы ходьбы и бега, которые при необходимости дорабатывались и адаптировались под конкретные задачи.
+              Производство ролика было организовано по полному студийному пайплайну.
+              Сначала была разработана раскадровка, затем выполнен общий лейаут сцены.
+              После этого были смоделированы локация и персонажи, выполнена анимация,
+              и на финальном этапе сцена была собрана и подготовлена к рендеру.
+
+              В процессе работы было создано множество анимационных циклов. Для каждого
+              персонажа были разработаны базовые циклы ходьбы и бега, которые при
+              необходимости дорабатывались и адаптировались под конкретные задачи.
+            </p>
           </div>
 
           <aside class="project-detail__meta">
@@ -122,8 +142,48 @@
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Портфолио. Все права защищены.</p>
+    <div class="container footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__title">Портфолио 3D-аниматора</p>
+          <p class="footer__text">
+            Создание анимационных роликов на заказ: от идеи и моделирования
+            до анимации и финального рендера.
+          </p>
+        </div>
+
+        <div class="footer__column">
+          <p class="footer__heading">Навигация</p>
+          <nav class="footer__nav">
+            <a href="index.html#hero">Главная</a>
+            <a href="cases.html">Проекты</a>
+            <a href="index.html#about">Обо мне</a>
+            <a href="index.html#contacts">Связь</a>
+          </nav>
+        </div>
+
+        <div class="footer__column">
+          <p class="footer__heading">Контакты</p>
+          <div class="footer__contacts">
+            <a href="tel:+79025087689">+7 (902) 508 76-89</a>
+            <a href="mailto:stepan-ryabichenko@yandex.ru">stepan-ryabichenko@yandex.ru</a>
+
+            <div class="socials footer__socials">
+              <a href="#" aria-label="VK">
+                <img src="img/icon-01.png" alt="VK">
+              </a>
+              <a href="#" aria-label="Telegram">
+                <img src="img/icon-02.png" alt="Telegram">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2026 Портфолио. Все права защищены.</p>
+        <a class="footer__back" href="#top">Наверх ↑</a>
+      </div>
     </div>
   </footer>
 
